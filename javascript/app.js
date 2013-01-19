@@ -78,19 +78,19 @@ var productView = function(productId) {
 
 		var el = data.entities.entity;
 
-		// var html = new EJS({
-  //           url: 'templates/productview.ejs'
-  //       }).render({
-  //       	name: el["name"] || "",
-  //       	image: el["image-url"] || "",
-  //       	value: el["value"] || "",
-  //       	overall: el.rating.value || "",
-  //       	health: el.rating["sub-ratings"].rating[0].value || "",
-  //       	env: el.rating["sub-ratings"].rating[1].value || "",
-  //       	society: el.rating["sub-ratings"].rating[2].value || ""
-  //       });
+		var html = new EJS({
+            url: 'templates/productview.ejs'
+        }).render({
+        	name: el["name"] || "",
+        	image: el["image-url"] || "",
+        	value: el["value"] || "",
+        	overall: el.rating.value || "",
+        	health: el.rating["sub-ratings"].rating[0].value || "",
+        	env: el.rating["sub-ratings"].rating[1].value || "",
+        	society: el.rating["sub-ratings"].rating[2].value || 
+        });
 
-  //       $("body").html(html);		
+        $("body").html(html);		
 
 	})
 
