@@ -56,7 +56,7 @@ var searchResults = function(products) {
         	id: el["id"],
         	image: el["image-url"],
         	name: el["name"],
-        	value: el["value"]
+        	value: el["rating"].value
 
         });
 
