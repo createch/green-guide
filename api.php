@@ -3,10 +3,14 @@
 header('content-type: application/json; charset=utf-8');
 
 $q = $_GET['q'];
+$id = $_GET['id'];
 
 $url = "http://api.goodguide.com/search.xml?api_key=xghpskqxrn6u6pdpxr83aznu&api_version=1.0&api_format=simple";
 
 $req = $url . "&q=" . $q;
+
+if (isset($id))
+	$req = $url . "&id=" . $id;
 
 $ch = curl_init($req);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
