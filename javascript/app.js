@@ -87,7 +87,7 @@ var productView = function(productId) {
         	overall: el.rating.value || "",
         	health: el.rating["sub-ratings"].rating[0].value || "",
         	env: el.rating["sub-ratings"].rating[1].value || "",
-        	society: el.rating["sub-ratings"].rating[2].value || 
+        	society: el.rating["sub-ratings"].rating[2].value
         });
 
         $("body").html(html);		
